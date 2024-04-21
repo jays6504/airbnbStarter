@@ -8,7 +8,7 @@ export function Listing() {
     const [selectedFilter, setSelectedFilter] = useState(0);
     return (
       <>
-        <h1>Listing</h1>
+        <Header />
       </>
     );
   }
