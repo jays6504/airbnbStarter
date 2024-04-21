@@ -1,14 +1,14 @@
 import { useState } from "react";
-import "./App.css";
-import { list, list2 } from "./assets/cards-list";
-import Cards from "./components/Cards";
-import Filter from "./components/Filter";
-import Header from "./components/Header";
+import "../App.css";
+import { list, list2 } from "../assets/cards-list";
+import Cards from "../components/Cards";
+import Filter from "../components/Filter";
+import Header from "../components/Header";
 
-function App() {
+export function Home() {
   const [selectedFilter, setSelectedFilter] = useState(0);
   return (
-    <div className="App">
+    <div className="Home">
       <Header />
       <Filter
         selectedFilter={selectedFilter}
@@ -18,5 +18,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
