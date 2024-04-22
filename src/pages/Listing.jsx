@@ -1,5 +1,5 @@
 import "../App.css";
-import "./style.css";
+import "./listingStyle.css";
 import { useLocation } from 'react-router-dom'
 import Header from "../components/Header";
 import "swiper/css";
