@@ -5,6 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -45,9 +46,7 @@ export default function BasicMenu() {
           },
         }}
       >
-        <MenuItem className="menu-items" onClick={handleClose}>
-          Signup
-        </MenuItem>
+        <Link to="/login">
         <MenuItem onClick={handleClose} className="menu-items">
           Login
         </MenuItem>
@@ -58,9 +57,12 @@ export default function BasicMenu() {
             width: "100%",
           }}
         />
-        <MenuItem onClick={handleClose} className="menu-items">
-          Airbnb Your Home
-        </MenuItem>
+        </Link>
+        <Link to="/createListing">
+          <MenuItem onClick={handleClose} className="menu-items">
+            Airbnb Your Home
+          </MenuItem>
+        </Link>
         <MenuItem onClick={handleClose} className="menu-items">
           Help
         </MenuItem>

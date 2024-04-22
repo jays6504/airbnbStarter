@@ -2,6 +2,8 @@ import "./App.css";
 import { HashRouter as Router,Routes,Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Listing } from "./pages/Listing";
+import { SignOn } from "./pages/SignOn";
+import { CreateListing } from "./pages/CreateListing";
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/listing" element={<Listing />} />
+        <Route path="/login" element={<SignOn />} />
+        <Route path="/createListing" element={<CreateListing />} />
       </Routes>
     </Router>
   );

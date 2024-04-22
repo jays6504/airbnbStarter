@@ -25,7 +25,6 @@ export function SignOn() {
         </div>
 
         <div className="Home">
-          <Header />
           <h1 className="sign-up-title">Sign Up:</h1>
           <div className="input-bar">
           Email
@@ -33,10 +32,18 @@ export function SignOn() {
           </div>
           <div className="input-bar">
           Password
-            <input className="PasswordSignInInput"></input>
+            <input className="password-sign-up-input"></input>
+          </div>
+          <div className="input-bar">
+          First Name
+            <input className="first-name-sign-up-input"></input>
+          </div>
+          <div className="input-bar">
+          First Name
+            <input className="last-name-sign-up-input"></input>
           </div>
           <div className="button-div">
-            <button className="signInButton">Sign In</button>
+            <button className="sign-up-button">Sign Up</button>
           </div>
         </div>
       </>
