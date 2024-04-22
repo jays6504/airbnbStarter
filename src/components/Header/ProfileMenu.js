@@ -62,9 +62,6 @@ export default function BasicMenu() {
           Airbnb Your Home
         </MenuItem>
         <MenuItem onClick={handleClose} className="menu-items">
-          Host an experience
-        </MenuItem>
-        <MenuItem onClick={handleClose} className="menu-items">
           Help
         </MenuItem>
       </Menu>

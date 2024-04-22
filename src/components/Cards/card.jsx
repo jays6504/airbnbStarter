@@ -9,8 +9,9 @@ import { Pagination, Navigation } from "swiper";
 import { Link } from "react-router-dom";
 
 function Card({ card }) {
+  const cardData=card;
   return (
-    <Link to="/listing">
+    <Link to={{pathname:"/listing"}} state={cardData}>
       <div className="card-box">
         <Swiper
           slidesPerView={1}

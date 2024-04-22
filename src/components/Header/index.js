@@ -12,11 +12,9 @@ function Header() {
     <div className="navbar">
       <img src={logo} alt="logo" className="navbar-logo" />
       <div className="search-bar">
-        <div className="search-bar-text">Anywhere</div>
-        <div className="search-bar-text">Any Week</div>
-        <div className="search-bar-text2">Add guests</div>
-        <div className="search-icon-div">
-          <SearchRoundedIcon className="search-icon" />
+        <input className="search-bar-input"></input>
+        <div className="search-bar-icon" onClick={search}>
+          <SearchRoundedIcon />
         </div>
       </div>
       <div className="profile-container">
@@ -35,3 +33,20 @@ function Header() {
 }
 
 export default Header;
+
+var inputBlacklist = [";", ":", "<", ">", "{", "}", "[", "]", "(", ")", "!", "@", "#", "$", "%", "^", "&", "*", "+", "=", "?", "/", "\\", "|", "~", "`", "'", "\"", ",", "."];
+
+/**
+ * @oaram {string} input - The input value from the search bar
+ * This function is called when the search icon is clicked. It passes the input value to the api.
+ * It also checks if the input value contains any blacklisted characters.
+ */
+function search() {
+  var String = document.querySelector(".search-bar-input");
+  console.log(String.value);
+  inputBlacklist.forEach(element => {
+    if (String.value.contains(element)) {
+      alert("Invalid input");
+    }
+  });
+}
