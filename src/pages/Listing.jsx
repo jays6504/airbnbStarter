@@ -21,7 +21,7 @@ export function Listing() {
       <>
        <div className="Home">
           <Header />
-          <div className="card-box">
+          <div className="card-box1">
             <Swiper
               slidesPerView={1}
               spaceBetween={15}
@@ -50,6 +50,17 @@ export function Listing() {
             <p style={{ margin: "0.2rem", fontSize: "1rem", color: "var(--black" }}>
               <span style={{ fontWeight: "600" }}>₹{card.price}</span> night
             </p>
+          </div>
+          <div className="input-bar">
+          Start Date
+            <input className="startDateInput"></input>
+          </div>
+          <div className="input-bar">
+          End Date
+            <input className="endDateInput"></input>
+          </div>
+          <div className="button-div">
+            <button className="bookButton">Book Now</button>
           </div>
         </div>
       </>
