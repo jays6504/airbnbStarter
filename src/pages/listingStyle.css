@@ -246,3 +246,11 @@
     font-weight: 600;
     color: var(--font-grey);
 }
+.tos-sign-up-input{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--font-grey);
+}

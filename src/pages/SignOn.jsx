@@ -42,6 +42,10 @@ export function SignOn() {
           First Name
             <input className="last-name-sign-up-input"></input>
           </div>
+          <div className="input-bar">
+            TOS Agreement
+            <input type="checkbox" className="tos-sign-up-input"></input>
+          </div>
           <div className="button-div">
             <button className="sign-up-button">Sign Up</button>
           </div>
