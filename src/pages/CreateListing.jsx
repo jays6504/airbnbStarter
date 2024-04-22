@@ -23,27 +23,27 @@ export function CreateListing() {
           
           <div className="input-bar">
           City
-            <input className="lasting-city-input"></input>
+            <input className="listing-city-input"></input>
           </div>
           
           <div className="input-bar">
           Listing Country
-            <input className="lasting-country-input"></input>
+            <input className="listing-country-input"></input>
           </div>
           
           <div className="input-bar">
           Listing Category
-            <input className="lasting-category-input"></input>
+            <input className="listing-category-input"></input>
           </div>
 
           <div className="input-bar">
           Listing Zip Code
-            <input className="lasting-zipcode-input"></input>
+            <input className="listing-zipcode-input"></input>
           </div>
           
           <div className="input-bar">
           Listing Image Link
-            <input className="lasting-image-link-input"></input>
+            <input className="listing-image-link-input"></input>
           </div>
 
           <div className="button-div">
