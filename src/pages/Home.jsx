@@ -7,6 +7,9 @@ import Header from "../components/Header";
 
 export function Home() {
   const [selectedFilter, setSelectedFilter] = useState(0);
+  fetch("http://localhost:3005")
+    .then((response) => response.json())
+    .then((json) => console.log(json));
   return (
     <div className="Home">
       <Header />

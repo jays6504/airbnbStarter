@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.vercel
+/new-express-project/node_modules
+/new-express-project/.vercel
