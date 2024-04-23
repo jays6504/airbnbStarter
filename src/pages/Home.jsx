@@ -1,15 +1,37 @@
 import { useState } from "react";
 import "../App.css";
-import { list, list2 } from "../assets/cards-list";
 import Cards from "../components/Cards";
-import Filter from "../components/Filter";
 import Header from "../components/Header";
-import { Mode } from "@mui/icons-material";
-const queryString = `SELECT * FROM users`;
+import Filter from "../components/Filter";
+import Suspense from "react";
+import {list} from "../assets/cards-list";
+import { wait } from "@testing-library/user-event/dist/utils";
+import { useNavigate, loader} from "react-router-dom";
+
+
+const queryString = 'SELECT * FROM project.Homepagelistings;';
+
 
 export function Home() {
   const [selectedFilter, setSelectedFilter] = useState(0);
-  sendQuery();
+
+  
+
+  var queryResponse = sendQuery();
+  console.log(queryResponse);
+  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+    if (list == undefined) {
+      return (
+        <div className="Home">
+          <Header />
+          <h1>Failed to load listings</h1>
+        </div>
+      );
+    }
+
+  console.log('Top');
+  console.log(list);
+  console.log('Bottom');
   return (
     <div className="Home">
       <Header />
@@ -17,17 +39,15 @@ export function Home() {
         selectedFilter={selectedFilter}
         setSelectedFilter={setSelectedFilter}
       />
-      {selectedFilter == 0 ? <Cards list={list} /> : <Cards list={list2} />}
+      {selectedFilter == 0 ? <Cards list={list}/>: <Cards list={list}/>}
     </div>
   );
+
 }
 
 function sendQuery() {
   var encoded = encodeURIComponent(queryString);
-  console.log(encoded);
-  console.log(`---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------`)
   var url=`http://localhost:3005/sql?data=${encoded}`
-  console.log(url)
   fetch(url)
     .then((response) => response.json())
     .then((json) => console.log(json));

@@ -3,7 +3,7 @@ const express = require("express");
 const mysql = require('mysql2');
 const cors = require('cors');
 const app = express();
-var query = "SELECT * FROM project.users";
+var query = 'SELECT * FROM `Booking`';
 var results = null;
 /*app.options('*', cors())*/
 
@@ -33,6 +33,7 @@ app.get("/sql", function (req, res)
             console.log(results);
             console.log(fields); // results contains rows returned by server
             res.send(results);
+            console.log(res);
         })
 });
 
