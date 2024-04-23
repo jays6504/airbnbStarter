@@ -53,7 +53,7 @@ export const list = [
     {
       listing_description: 'Blue and white themed home 4 blocks to PSU campus',
       listing_name: 'Penn State Home',
-      listing_image: 'https://www.homebunch.com/wp-content/uploads/2018/10/interior-design-ideas-M-House-7_18_17-Web-82.jpg',
+      listing_image: 'https://www.homestratosphere.com/wp-content/uploads/2018/07/blue-house-exterior-photo2018-07-05-at-1.57.50-PM-25.jpg',
       owner_first_name: 'jack',
       owner_last_name: 'box',
       category: 'house',
