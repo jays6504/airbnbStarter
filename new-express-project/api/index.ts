@@ -4,7 +4,7 @@ const mysql = require('mysql2');
 const cors = require('cors');
 const app = express();
 var query = "SELECT * FROM project.users";
-
+var results = null;
 /*app.options('*', cors())*/
 
 app.use(cors());
@@ -25,12 +25,13 @@ const connection = mysql.createConnection({
 
 app.get("/sql", function (req, res) 
 {
-    console.log(req.query)
-    query = decodeURI(req.query);
-    console.log(query);
+    var decoded = decodeURI(req.query.data);
+    console.log(decoded);
      connection.query(
-        query,
+        decoded,
         function(err, results, fields) {
+            console.log(results);
+            console.log(fields); // results contains rows returned by server
             res.send(results);
         })
 });
