@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 
 // simple query
 connection.query(
-  'SELECT * FROM `Booking`',
+  'SELECT * FROM project.Homepagelistings;',
   function(err, results, fields) {
     console.log(results); // results contains rows returned by server
     console.log(fields); // fields contains extra meta data about results, if available

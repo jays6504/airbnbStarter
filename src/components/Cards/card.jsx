@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 function Card({ card }) {
   const cardData=card;
+  console.log(cardData);
   return (
     <Link to={{pathname:"/listing"}} state={cardData}>
       <div className="card-box">
@@ -23,23 +24,17 @@ function Card({ card }) {
           modules={[Pagination, Navigation]}
           className="swiper-container"
         >
-          {card.imgSrc.map((src, i) => (
-            <SwiperSlide key={i}>
-              <img src={src} className="card-img" />
+            <SwiperSlide key={0}>
+              <img src={card.listing_image} className="card-img" />
             </SwiperSlide>
-          ))}
         </Swiper>
         <div className="card-info-flex">
-          <h3 className="card-title">{card.title}</h3>
-          <div className="card-rating">
-            <StarRateRoundedIcon />
-            <p>{card.rating}</p>
-          </div>
+          <h3 className="card-title">{card.listing_name}</h3>
         </div>
-        <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.desc}</p>
-        <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.date}</p>
+        <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.address}, {card.property_city}, {card.property_country}</p>
+        <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.listing_desc}</p>
         <p style={{ margin: "0.2rem", fontSize: "1rem", color: "var(--black" }}>
-          <span style={{ fontWeight: "600" }}>₹{card.price}</span> night
+          <span style={{ fontWeight: "600" }}>${card.price_per_night}</span> night
         </p>
       </div>
     </Link>
