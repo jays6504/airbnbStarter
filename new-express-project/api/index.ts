@@ -17,7 +17,7 @@ var corsOptions = {
 
 // create the connection to database
 const connection = mysql.createConnection({
-    host: '3.128.78.212',
+    host: '18.191.254.206',
     user: 'james',
     password: 'password',
     database: 'project'
@@ -26,6 +26,20 @@ const connection = mysql.createConnection({
 app.get("/sql", function (req, res) 
 {
     var decoded = decodeURI(req.query.data);
+    console.log(decoded);
+     connection.query(
+        decoded,
+        function(err, results, fields) {
+            console.log(results);
+            //onsole.log(fields); // results contains rows returned by server
+            res.send(results);
+            //console.log(res);
+        })
+});
+
+app.get("/sql2", function (req, res) 
+{
+    var decoded = req.body;
     console.log(decoded);
      connection.query(
         decoded,

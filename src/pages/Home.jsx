@@ -19,7 +19,6 @@ export function Home() {
 
   var queryResponse = sendQuery();
   console.log(queryResponse);
-  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
     if (list == undefined) {
       return (
         <div className="Home">

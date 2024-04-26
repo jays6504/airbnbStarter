@@ -7,6 +7,9 @@ import BasicMenu from "./ProfileMenu";
 import SimpleBottomNavigation from "./BottomNav";
 import MobileSearchBar from "../MobileSearchBar";
 import { Link } from "react-router-dom";
+import {list} from "../../assets/cards-list";
+import { renderToStaticMarkup, renderToStaticNodeStream } from "react-dom/server";
+import Cards from "../Cards";
 
 function Header() {
   return (
@@ -44,11 +47,23 @@ var inputBlacklist = [";", ":", "<", ">", "{", "}", "[", "]", "(", ")", "!", "@"
  * It also checks if the input value contains any blacklisted characters.
  */
 function search() {
-  var String = document.querySelector(".search-bar-input");
-  console.log(String.value);
+  var returnList = [];
+  var String = document.querySelector(".search-bar-input").value;
+  console.log(String);
+  var index =0;
   inputBlacklist.forEach(element => {
-    if (String.value.contains(element)) {
+    if (String.includes(element)) {
       alert("Invalid input");
+      return;
+    }
+  })
+  list.forEach(element => {
+    if (element.listing_name.includes(String)) {
+      returnList[index] = element;
+      index++;
     }
   });
+  console.log(returnList);
+  renderToStaticMarkup(<Cards list={returnList}/>);
+  return;
 }
