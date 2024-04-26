@@ -21,3 +21,12 @@ function App() {
 }
 
 export default App;
+
+function getAccountID()
+{
+  return account_id;
+}
+function setAccountID(id)
+{
+  account_id = id;
+}

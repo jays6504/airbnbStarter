@@ -51,6 +51,7 @@ export const list2 = [
 
 export const list = [
     {
+      id:1,
       listing_description: 'Blue and white themed home 4 blocks to PSU campus',
       listing_name: 'Penn State Home',
       listing_image: 'https://www.homestratosphere.com/wp-content/uploads/2018/07/blue-house-exterior-photo2018-07-05-at-1.57.50-PM-25.jpg',
@@ -66,6 +67,7 @@ export const list = [
       price_per_night: '1000'
     },
     {
+      id:2,
       listing_description: 'A lovely appartment above a great cafe!',
       listing_name: 'Lemont house',
       listing_image: 'https://cdn.usarestaurants.info/assets/uploads/31d022acd6cf1cf7f67a861152963a9d_-united-states-pennsylvania-centre-county-college-township-lemont-cafe-lemont-814-321-4337htm.jpg',
@@ -81,6 +83,7 @@ export const list = [
       price_per_night: '3000'
     },
     {
+      id:3,
       listing_description: '1000sq ft home featuring a modern style.',
       listing_name: 'Creekside Home',
       listing_image: 'https://images.trvl-media.com/lodging/34000000/33570000/33561100/33561066/14f949b8.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill',
@@ -96,6 +99,7 @@ export const list = [
       price_per_night: '2000'
     },
     {
+      id:4,
       listing_description: 'Old refurbished mansion featuring a backyard pool',
       listing_name: 'Mansion',
       listing_image: 'https://www.sothebysrealty.com/blog-api/wp-content/uploads/2022/09/image4-1-1024x683.png',
@@ -111,6 +115,7 @@ export const list = [
       price_per_night: '7500'
     },
     {
+      id:5,
       listing_description: 'Large cabin deep in the forest with a pond',
       listing_name: 'Swedish Cabin',
       listing_image: 'https://d19lgisewk9l6l.cloudfront.net/assetbank/Arctic_Retreat_Swedish_Lapland_55344.jpg',
@@ -126,6 +131,7 @@ export const list = [
       price_per_night: '4000'
     },
     {
+      id:6,
       listing_description: 'Stylish villa for new adventures',
       listing_name: 'Boho Villa',
       listing_image: 'https://boho.villas/wp-content/uploads/2022/09/1-br-Close-up-Exterior-scaled.jpg',
@@ -141,6 +147,7 @@ export const list = [
       price_per_night: '3250'
     },
     {
+      id:7,
       listing_description: 'Upbeat spacious appartment with modern touches',
       listing_name: 'Modern Appartment',
       listing_image: 'https://www.decorilla.com/online-decorating/wp-content/uploads/2020/07/Sleek-and-transitional-modern-apartment-design-scaled.jpg',
@@ -156,6 +163,7 @@ export const list = [
       price_per_night: '1500'
     },
     {
+      id:8,
       listing_description: 'Comforting hotel, a block from PSU campus',
       listing_name: 'Graduate Hotel',
       listing_image: 'https://lh3.googleusercontent.com/p/AF1QipOQj7DcsSVrONg-RfmiLIDzLm0V785Wg6VPfMo0=s680-w680-h510',
@@ -171,6 +179,7 @@ export const list = [
       price_per_night: '750'
     },
     {
+      id:9,
       listing_description: 'Appartment with great views to the beach',
       listing_name: 'Beachside Appartment',
       listing_image: 'https://www.beachhouserevere.com/wp-content/uploads/beach-house-apts-gallery-00029-480.jpg',
@@ -186,6 +195,7 @@ export const list = [
       price_per_night: '500'
     },
     {
+      id:10,
       listing_description: 'Boutique styled rooms with a modern feel',
       listing_name: 'Boutique Hotel',
       listing_image: 'https://media-cdn.tripadvisor.com/media/photo-s/22/43/10/3e/xka-n-hotel-boutique.jpg',
