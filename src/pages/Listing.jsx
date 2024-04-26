@@ -19,38 +19,28 @@ export function Listing() {
     console.log(card);
     return (
       <>
-       <div className="Home">
-          <Header />
-          <div className="card-box1">
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={15}
-              loop={true}
-              mousewheel={true}
-              cssMode={true}
-              pagination
-              modules={[Pagination, Navigation]}
-              className="swiper-container"
-            >
-              {card.imgSrc.map((src, i) => (
-                <SwiperSlide key={i}>
-                  <img src={src} className="card-img" />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <div className="card-info-flex">
-              <h3 className="card-title">{card.title}</h3>
-              <div className="card-rating">
-                <StarRateRoundedIcon />
-                <p>{card.rating}</p>
-              </div>
-            </div>
-            <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.desc}</p>
-            <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.date}</p>
-            <p style={{ margin: "0.2rem", fontSize: "1rem", color: "var(--black" }}>
-              <span style={{ fontWeight: "600" }}>₹{card.price}</span> night
-            </p>
-          </div>
+       <div className="card-box1">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={15}
+          loop={true}
+          mousewheel={true}
+          cssMode={true}
+          pagination
+          modules={[Pagination, Navigation]}
+          className="swiper-container"
+        >
+            <SwiperSlide key={0}>
+              <img src={card.listing_image} className="card-img" />
+            </SwiperSlide>
+        </Swiper>
+        <div className="card-info-flex">
+          <h3 className="card-title">{card.listing_name}</h3>
+        </div>
+        <p style={{ margin: 0, color: "var(--font-grey)" , }}>{card.address}, {card.property_city}, {card.property_country}</p>
+        <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.listing_desc}</p>
+        <p style={{ margin: "0.2rem", fontSize: "1rem", color: "var(--black" }}>
+          <span style={{ fontWeight: "600" }}>${card.price_per_night}</span> night</p>
           <div className="input-bar">
           Start Date
             <input className="startDateInput"></input>

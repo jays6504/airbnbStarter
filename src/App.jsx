@@ -5,6 +5,8 @@ import { Listing } from "./pages/Listing";
 import { SignOn } from "./pages/SignOn";
 import { CreateListing } from "./pages/CreateListing";
 
+var account_id = -1; 
+
 function App() {
   return (
     <Router>
