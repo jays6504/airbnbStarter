@@ -58,7 +58,9 @@ export function SignOn() {
 async function SignOnButton()
 {
   var email = document.querySelector(".email-sign-in-input").value;
+  sanitize(email);
   var password = document.querySelector(".password-sign-in-input").value;
+  sanitize(password);
   var queryString = `SELECT account_id FROM project.Account WHERE email = '${email}' AND password = '${password}';`;
   var encoded = encodeURIComponent(queryString);
   
@@ -79,9 +81,13 @@ async function SignOnButton()
 async function SignUpButton()
 {
   var email = document.querySelector(".email-sign-up-input").value;
+  sanitize(email);
   var password = document.querySelector(".password-sign-up-input").value;
+  sanitize(password);
   var first_name = document.querySelector(".first-name-sign-up-input").value;
+  sanitize(first_name);
   var last_name = document.querySelector(".last-name-sign-up-input").value;
+  sanitize(last_name);
   var tosBool = document.querySelector(".tos-sign-up-input").checked;
   if (tosBool = false) {
     alert("You must agree to the TOS");
@@ -110,4 +116,16 @@ async function SignUpButton()
   }
   App.account_id = responseData[0].account_id;
   return;
+}
+
+var inputBlacklist = [";", ":", "<", ">", "{", "}", "[", "]", "(", ")", "!", "#", "$", "%", "^", "&", "*", "+", "=", "?", "/", "\\", "|", "~", "`", "'", "\"", ","];
+
+function sanitize(String) {
+  console.log(String);
+  inputBlacklist.forEach(element => {
+    if (String.includes(element)) {
+      alert("Invalid input");
+      return;
+    }
+  })
 }

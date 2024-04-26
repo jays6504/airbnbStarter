@@ -67,7 +67,9 @@ export function Listing() {
 function booking()
 {
   var startDate = document.querySelector(".startDateInput").value;
+  sanitize(startDate);
   var endDate = document.querySelector(".endDateInput").value;
+  sanitize(endDate);
   var queryString = `INSERT INTO project.Booking (listing_id, start_date, end_date, renter_id) VALUES (${thisCard.id}, '${startDate}', '${endDate}',${App.account_id});`;
   var encoded = encodeURIComponent(queryString);
   var url=`http://localhost:3005/sql?data=${encoded}`
@@ -75,4 +77,16 @@ function booking()
   fetch(url)
     .then((response) => response.json())
     .then((json) => console.log(json));
+}
+
+var inputBlacklist = [";", ":", "<", ">", "{", "}", "[", "]", "(", ")", "!", "@", "#", "$", "%", "^", "&", "*", "+", "=", "?", "/", "\\", "|", "~", "`", "'", "\"", ",", "."];
+
+function sanitize(String) {
+  console.log(String);
+  inputBlacklist.forEach(element => {
+    if (String.includes(element)) {
+      alert("Invalid input");
+      return;
+    }
+  })
 }
