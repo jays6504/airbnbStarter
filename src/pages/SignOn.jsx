@@ -48,7 +48,7 @@ export function SignOn() {
           <input type="checkbox" className="tos-sign-up-input"></input>
         </div>
         <div className="button-div">
-          <button className="sign-up-button">Sign Up</button>
+          <button className="sign-up-button" onClick={SignUpButton}>Sign Up</button>
         </div>
       </div>
     </>
@@ -89,7 +89,7 @@ async function SignUpButton()
   }
   else
   {
-    tos = 1;
+     var tos = 1;
   }
   if (!tos) {
     alert("You must agree to the TOS");
@@ -98,7 +98,6 @@ async function SignUpButton()
   var queryString = `INSERT INTO project.Account (email, password, first_name, last_name) VALUES ('${email}', '${password}', '${first_name}', '${last_name}');`;
   var encoded = encodeURIComponent(queryString);
   console.log(encoded);
-  return;
   var responseData
   var url=`http://localhost:3005/sql?data=${encoded}`
   await fetch(url)
